@@ -19,10 +19,9 @@ module OmniAuth
       
       info do 
         { 
-          'name'     => raw_info["display_name"],
-          'nickname' => raw_info["username"],
-          'image'    => raw_info["icon"]["url"],
-          'urls'     => { 'Loctouch' => "http://tou.ch/user/#{raw_info['username']}" }
+          'nickname' => raw_info["display_name"],
+          'image'    => raw_info["icon"],
+          'urls'     => { 'Loctouch' => raw_info["link"] }
         }
       end
       
@@ -32,8 +31,7 @@ module OmniAuth
       
       def raw_info
         @raw_info ||= begin
-                        user_id = access_token.params["user_id"]
-                        MultiJson.decode(access_token.get("/v1/users/@self").body)["value"]["users"][0]
+                        MultiJson.decode(access_token.get("/v1/users/@self").body)["user"]
                       end
       end
     end
