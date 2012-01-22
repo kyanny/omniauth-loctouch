@@ -3,7 +3,7 @@ require 'multi_json'
 
 module OmniAuth
   module Strategies
-    class Loctouch < OmniAuth::Strategies::Oauth2
+    class Loctouch < OmniAuth::Strategies::OAuth2
       option :client_options, { 
         :site          => 'http://tou.ch',
         :authorize_url => 'https://tou.ch/oauth2/authenticate',
