@@ -5,7 +5,7 @@ module OmniAuth
   module Strategies
     class Loctouch < OmniAuth::Strategies::OAuth2
       option :client_options, { 
-        :site          => 'http://tou.ch',
+        :site          => 'http://api.loctouch.com',
         :authorize_url => 'https://tou.ch/oauth2/authenticate',
         :token_url     => 'https://tou.ch/oauth2/token'
       }

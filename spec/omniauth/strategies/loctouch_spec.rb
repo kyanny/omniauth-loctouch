@@ -19,11 +19,11 @@ describe OmniAuth::Strategies::Loctouch do
     end
 
     it 'has correct access token url' do
-      subject.client.token_url.should eq('https://loctouch.com/oauth2/access_token')
+      subject.client.token_url.should eq('https://tou.ch/oauth2/token')
     end
 
     it 'has correct authorize url' do
-      subject.client.authorize_url.should eq('https://loctouch.com/oauth2/authenticate')
+      subject.client.authorize_url.should eq('https://tou.ch/oauth2/authenticate')
     end
   end
 
