@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::Picplz do
+describe OmniAuth::Strategies::Loctouch do
   before do
     @consumer_key    = 'key'
     @consumer_secret = 'secret'
@@ -8,22 +8,22 @@ describe OmniAuth::Strategies::Picplz do
 
   subject do
     args = [@client_id, @client_secret, @options].compact
-    OmniAuth::Strategies::Picplz.new(nil, *args).tap do |strategy|
+    OmniAuth::Strategies::Loctouch.new(nil, *args).tap do |strategy|
       strategy.stub(:request) { @request }
     end
   end
 
   describe '#consumer' do
-    it 'has correct Picplz site' do
-      subject.client.site.should eq('http://api.picplz.com')
+    it 'has correct Loctouch site' do
+      subject.client.site.should eq('http://api.loctouch.com')
     end
 
     it 'has correct access token url' do
-      subject.client.token_url.should eq('https://picplz.com/oauth2/access_token')
+      subject.client.token_url.should eq('https://loctouch.com/oauth2/access_token')
     end
 
     it 'has correct authorize url' do
-      subject.client.authorize_url.should eq('https://picplz.com/oauth2/authenticate')
+      subject.client.authorize_url.should eq('https://loctouch.com/oauth2/authenticate')
     end
   end
 
