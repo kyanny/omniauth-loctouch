@@ -1,7 +1,2 @@
 require "omniauth-loctouch/version"
-
-module Omniauth
-  module Loctouch
-    # Your code goes here...
-  end
-end
+require 'omniauth/strategies/loctouch'
