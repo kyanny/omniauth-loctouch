@@ -19,10 +19,10 @@ module OmniAuth
       
       info do 
         { 
-          'name' => raw_info["display_name"],
+          'name'     => raw_info["display_name"],
           'nickname' => raw_info["username"],
-          'image' => raw_info["icon"]["url"],
-          'urls' => { 'Loctouch' => "http://tou.ch/user/#{raw_info['username']}" }
+          'image'    => raw_info["icon"]["url"],
+          'urls'     => { 'Loctouch' => "http://tou.ch/user/#{raw_info['username']}" }
         }
       end
       
