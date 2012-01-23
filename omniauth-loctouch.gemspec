@@ -4,7 +4,7 @@ require "omniauth-loctouch/version"
 
 Gem::Specification.new do |s|
   s.name        = "omniauth-loctouch"
-  s.version     = Omniauth::Loctouch::VERSION
+  s.version     = OmniAuth::Loctouch::VERSION
   s.authors     = ["Kensuke Nagae"]
   s.email       = ["kyanny@gmail.com"]
   s.homepage    = "https://github.com/banyan/omniauth-loctouch"
