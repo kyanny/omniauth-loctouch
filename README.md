@@ -20,6 +20,12 @@ Tested with the following Ruby versions:
 - MRI 1.9.2
 - MRI 1.9.3
 
+## See Also
+
+sample rails application is available:
+
+https://github.com/kyanny/hello-omniauth-loctouch
+
 ## License
 
 MIT License http://kyanny.mit-license.org/
