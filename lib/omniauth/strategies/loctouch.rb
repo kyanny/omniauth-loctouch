@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'omniauth-oauth2'
 require 'multi_json'
 
@@ -31,9 +30,9 @@ module OmniAuth
       end
       
       def raw_info
-        access_token.options[:mode] = :query
-        access_token.options[:param_name] = 'oauth_token'
-        @raw_info ||= MultiJson.decode(access_token.get("/v1/users/@self", { 'oauth_token' => access_token.token }).body)["user"]
+        @raw_info ||= begin
+                        MultiJson.decode(access_token.get("/v1/users/@self").body)["user"]
+                      end
       end
     end
   end
