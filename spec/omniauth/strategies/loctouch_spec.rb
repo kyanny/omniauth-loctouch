@@ -15,7 +15,7 @@ describe OmniAuth::Strategies::Loctouch do
 
   describe '#consumer' do
     it 'has correct Loctouch site' do
-      subject.client.site.should eq('http://api.loctouch.com')
+      subject.client.site.should eq('https://api.loctouch.com')
     end
 
     it 'has correct access token url' do
